@@ -1,0 +1,7 @@
+echo "# pwad68_javaScript_lessons" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/hafsa68/pwad68_javaScript_lessons.git
+git push -u origin main

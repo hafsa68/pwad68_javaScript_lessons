@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #display {
+            width: 80px;
+            height: 20px;
+            background-color: aquamarine;
+            padding: 50px;
+        }
+
+        #dis {
+            width: 80px;
+            height: 20px;
+            background-color: rgb(117, 117, 121);
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Calculate</h3>
+    <div id="display"></div>
+    <div id="dis"></div>
+
+    <script>
+
+        function sum(a, b) {
+            a = prompt("enter first number");
+            b = prompt("enter second number");
+            a = parseInt(a);
+            b = parseInt(b);
+            let z = a + b;
+            document.getElementById("display").innerHTML = "Total is:" + z;
+
+
+        }
+        function Mul(a, b) {
+            a = prompt("enter first number");
+            b = prompt("enter second number");
+            //a = parseInt(a);
+            //b = parseInt(b);
+            //alert(a*b);
+            let z = a * b;
+            //document.write(z);
+            document.getElementById("dis").innerHTML = "Multiply is is:" + z;
+        }
+
+
+
+
+
+    </script>
+    <button onclick="sum()">sum</button>
+    <button onclick="Mul()">Multiply</button>
+</body>
+
+</html>

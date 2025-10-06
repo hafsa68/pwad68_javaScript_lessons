@@ -7,22 +7,23 @@
     <title>Document</title>
     <style>
         table,
-        td,
-        th {
+        td,th {
             border: 1px, solid #260c57;
             border-collapse: collapse;
         }
     </style>
 </head>
 
-<body bgcolor="springgreen">
+<body>
+
+    <h3>Flower List with Table</h3>
     <script>
 
         const fruits = ["Mango", "Apple", "Orange", "Grape"];
         let sl = 1;
         let output = "<table>";
-        output = "<tr><th>SN</th><th>Fruits Name</th></tr>";
-        for (let k = 0; k < fruits.length; k++) {
+        output = "<tr><th>SN</th> <th>Fruits Name</th></tr>";
+        for (let i = 0; i < fruits.length; i++) {
             output += "<tr>";
             output += "<td>" + sl + "</td>";
             output += "<td>" + fruits[k] + "</td>";

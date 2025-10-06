@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h3>Registration Form</h3>
     <form action="" name="rgs">
         <input type="text" name="fullname" placeholder="Enter your name"> <br>
         Gender: <br>
-        <input type="radio" name = "gender" value="male">Male
-        <input type="radio" name = "gender" value="female">Female <br>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female <br>
         District:
         <select name="district" id="">
-            <option value="" >Select one</option>
-            <option value="">Dhaka</option>
-            <option value="">Barishal</option>
-            <option value="">Sylhet</option>
-            <option value="">Khulna</option>
+            <option value="">Select one</option>
+            <option >Dhaka</option>
+            <option >Barishal</option>
+            <option >Sylhet</option>
+            <option >Khulna</option>
         </select> <br>
         Address:<br>
         <textarea name="address" id="" placeholder="Enter address"></textarea> <br>
-        <button onclick="form_handle()" type="button">submit</button>
+        <button onclick= "form_handle()" type="button">submit</button>
     </form>
 <div id="output"></div>
     <script>
 
-        function form_handle(){
+        function form_handle() {
             let fullname = document.rgs.fullname.value;
             let p_gender = document.rgs.gender.value;
             let p_district = document.rgs.district.value;
             let p_address = document.rgs.address.value;
-           
-           let output = "The person Name is :" +fullname + "<br>" + "the person gender is :" + p_gender +"<br>"
-            + "the person district is:" + p_district + "<br>" + "the person address is :" + p_address + "<br>";
-           
-           document.getElementById(output).innerHTML = output;
-           
-           
-           
-            
-            
-           
+
+           let output = "The person Name is :" +fullname + "<br>" +
+           "the person gender is :" + p_gender +"<br>"+
+           "the person district is:" + p_district + "<br>" + 
+           "the person address is :" + p_address +"<br>";
+
+            document.getElementById("output").innerHTML = output;
+
+
+
+
+
+
 
 
 
         }
     </script>
 </body>
+
 </html>

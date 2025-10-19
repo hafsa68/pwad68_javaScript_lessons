@@ -6,12 +6,21 @@
     <title>Document</title>
 </head>
 <body>
+    
+    <form action="" name="myform">
+        <strong>Email Id:&nbsp;</strong><input type="text" name="email" placeholder="Enter Email Id"><br><br>
+        <strong>Confirm Email Id:&nbsp;</strong><input type="text" name="confirmEmail"><br><br>
+        <input type="button" value="submit" onclick="emailvalidation()" name="save"/>
+
+    </form>
     <script>
         function emailvalidation(){
-            let pattern = /[A-z0-9._]+@[A-z0-9._]+\.[A-z]{2-4}$/i;
-            if(document.myform.email.value.search(pattern)==-1){
+            let pattern = /[A-z0-9]+@[A-z0-9]+\.[A-z]{2,4}$/i;
+            let e = document.myform.email.value
+            let c = document.myform.confirmEmail.value
+            if(e.search(pattern)==-1){
             alert("InValid Email");}
-            else if(document.myform.email.value != document.myform.confirmEmail.value){
+            else if(e !=c){
                 alert("Email dose not Matching");
             }
             else{
@@ -20,11 +29,5 @@
         }
     </script>
 
-    <form name="myform">
-        <strong>Email Id:&nbsp;</strong><input type="text" name="email"><br><br>
-        <strong>Confirm Email Id:&nbsp;</strong><input type="text" name="confirmEmail"><br><br>
-        <input type="button" value="submit" onclick="emailvalidation()" name="save"/>
-
-    </form>
 </body>
 </html>

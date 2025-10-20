@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="LoginForm">
+        <input type="text" name="fullname"> <br>
+        <input type="password" name="password"> <br>
+        <input type="password" name="con_password"> <br>
+        <button type="button" value="Submit" onclick="LoginValidation()">Login </button>
+
+
+
+    </form>
+    <script>
+        function LoginValidation() {
+            let fullname = document.LoginForm.fullname.value;
+            let password = document.LoginForm.password.value;
+            let con_password = document.LoginForm.con_password.value;
+
+
+            let errMs =""
+            if (fullname == "") {
+                errMs += "Enter fullname\n"
+            }else if (fullname.length<5 ||fullname.length>10 ){
+                errMs += "Enter fullname must be 5 to 10 characyer\n"
+            }
+            if (password == "") {
+                errMs += "Enter password\n"
+            }
+            else if (password.length<5 ||password.length>8 ){
+                errMs += "Enter fullname must be 5 to 8 characyer\n"
+            }
+            if (con_password == "") {
+                errMs += "Enter conpassword\n"
+            }else if (password != con_password ){
+                errMs += "Password doesnt match\n"
+            }
+
+            
+            if (errMs != "") {
+                alert(errMs)
+            }else{
+                alert("Login Successful")
+            }
+
+// alert("succesful")
+
+        }
+    </script>
+</body>
+
+</html>

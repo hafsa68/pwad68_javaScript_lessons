@@ -17,32 +17,35 @@
         District:
         <select name="district" id="">
             <option value="">Select one</option>
-            <option >Dhaka</option>
-            <option >Barishal</option>
-            <option >Sylhet</option>
-            <option >Khulna</option>
+            <option>Dhaka</option>
+            <option>Barishal</option>
+            <option>Sylhet</option>
+            <option>Khulna</option>
         </select> <br>
         Address:<br>
         <textarea name="address" id="" placeholder="Enter address"></textarea> <br>
-        <button onclick= "form_handle()" type="button">submit</button>
+        <button onclick="form_handle()" type="button">submit</button>
     </form>
-<div id="output"></div>
+
     <script>
 
         function form_handle() {
 
-          
+            let x = window.open("", "", "width=400,height=200,top= 300,left = 300")
+
             let fullname = document.rgs.fullname.value;
             let p_gender = document.rgs.gender.value;
             let p_district = document.rgs.district.value;
             let p_address = document.rgs.address.value;
+           
+            let output = " <h1>Registration Form</h1> " + " The person Name is :" + fullname + "<br>" +
+                "the person gender is :" + p_gender + "<br>" +
+                "the person district is:" + p_district + "<br>" +
+                "the person address is :" + p_address + "<br>";
+               
 
-           let output = "The person Name is :" +fullname + "<br>" +
-           "the person gender is :" + p_gender +"<br>"+
-           "the person district is:" + p_district + "<br>" + 
-           "the person address is :" + p_address +"<br>";
 
-            document.getElementById("output").innerHTML = output;
+            x.document.write(output)
 
 
 

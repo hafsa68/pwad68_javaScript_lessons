@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var sample2 = new Image()
+sample2.src = "download (1).jpg"
+var sample1 = new Image()
+sample1.src = "download.jpg"
+function switch2() {
+   document.sample.src=sample2.src
+}
+        
+      function switch1(){
+document.sample.src=sample1.src
+      }
+
+    </script>
+</body>
+  <a href="" onmouseover="switch2()" onmouseout="switch1()"> <img name="sample" src="download.jpg" alt="" > </a>
+</html>

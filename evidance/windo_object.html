@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <a href="" onclick="mywindow()">click here</a>
+    <script>
+        function mywindow() {
+            let x = window.open("", "", "width=400,height=200,top= 300,left = 300")
+            let output = ""
+            output += "<h1>all information</h1>"
+            output += "Name: Jihan <br> "
+            output += "address:Farmgate <br>"
+            output += "roll:54645675"
+            x.document.write(output)
+        }
+    </script>
+</body>
+
+</html>

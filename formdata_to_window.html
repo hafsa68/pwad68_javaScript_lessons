@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="form_data.js"></script>
+</head>
+<body>
+    <form action="" name="myform" id="">
+    <input type="text" name="fname" placeholder="Enter your name"> <br>
+    <textarea name="address" placeholder="Enter address"></textarea> <br>
+    <input type="text" name="Phone" placeholder="Enter your Phone"> <br>
+    <button onclick="callWindow()" type="button">Click to Open in New Window</button>
+    </form>
+    <script>
+        function callWindow(){
+       let fullname = document.myform.fname.value;
+        let address = document.myform.address.value;
+       let phone = document.myform.Phone.value;
+       //new object initialize
+         const myobject  = new FormData(fullname, address, phone);
+
+        let data = myobject.DataDisplay();
+       let mywindow =  window.open("","","width = 400,height= 200")
+       mywindow.document.write(data);
+
+        }
+
+        
+    </script>
+
+
+</body>
+</html>

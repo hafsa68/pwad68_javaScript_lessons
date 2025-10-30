@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform">
+    <input type="text" name="email" >
+    <input type="text" name="con_email" >
+    <input type="button" onclick="email_p()" value="Submit">
+    </form>
+    <script>
+        function email_p(){
+         let email =   document.myform.email.value
+          let con =  document.myform.con_email.value
+          let pettran = /[A-z0-9]+@[A-z0-9]+\.[A-z]{2,4}$/;
+          if(email.search(pettran)== -1){
+            alert("Invalid email")
+          }else if(email != con){
+            alert("does'nt match")
+          }else{
+            alert("all are valid")
+          }
+        }
+    </script>
+</body>
+</html>

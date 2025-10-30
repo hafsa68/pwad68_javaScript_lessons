@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform">
+        Name: <br>
+        <input type="text" name="fname"> <br>
+        Contact: <br>
+        <input type="text" name="contact"> <br>
+        Remarks: <br>
+        <input type="text" name="re"> <br>
+        Gender: <br>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female <br>
+        Courses: <br>
+        <input type="checkbox" name="nt" value="NT"> NT
+        <input type="checkbox" name="nt" value="IAD"> IAD
+        <input type="checkbox" name="nt" value="DDD"> DDD
+        <input type="checkbox" name="nt" value="ESAD"> ESAD <br>
+
+        <select name="location" id="">
+            <option value="">select</option>
+            <option >Banani</option>            
+            <option >Dhanmundi</option>            
+            <option >Mirpur</option>            
+            <option >Mohammmadpur</option>            
+
+        </select>
+        <button type="button" onclick="form_v()">Submit</button>
+    </form>
+
+    <script>
+        function form_v(){
+            let x = window.open("","","width = 400; hight =200")
+            
+            let fname =document.myform.fname.value
+            let con = document.myform.contact.value
+            let gender = document.myform.gender.value
+            let location = document.myform.location.value
+
+            let box = []
+            const check = document.querySelectorAll('input[name="nt"]:checked')
+            for( let i =  0; i<check.length;i++){
+                box.push(check[i].value)
+            }
+            
+
+            let output ="<h1>Trainee's Data</h1>" +  "<br>" + "Name :" + fname + "<br>" +
+              "Contact :" + con + "<br>" + 
+               
+            "Gender :" + gender + "<br>" +
+            "Location :" + location + "<br>" + "Courses :" + box;
+          x. document.write(output)
+           
+        }
+       
+    </script>
+</body>
+</html>

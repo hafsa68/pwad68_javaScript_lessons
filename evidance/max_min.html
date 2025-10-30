@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="max_min()">click on</button>
+    <script>
+        function max_min() {
+            let n1 = prompt("enter 1")
+            let n2 = prompt("enter 2")
+            let n3 = prompt("enter 3")
+            n1 = parseInt(n1)
+            n2 = parseInt(n2)
+            n3 = parseInt(n3)
+            const num = [n1, n2, n3]
+            let max = num[0];
+            let min = num[0];
+            for (let i = 1; i < num.length; i++) {
+                if (num[i] > max) {
+                    max = num[i]
+                }
+                if (num[i] < min) {
+                    min = num[i]
+
+                }
+            }
+            document.write("max :" + max + "<br>" + "min :" + min)
+
+        }
+
+    </script>
+</body>
+
+</html>

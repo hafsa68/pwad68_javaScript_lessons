@@ -24,6 +24,8 @@
         </select> <br>
         Address:<br>
         <textarea name="address" id="" placeholder="Enter address"></textarea> <br>
+        <input type="checkbox" name="nt" value="NT">NT
+        <input type="checkbox" name="nt" value="ABC">ABC
         <button onclick= "form_handle()" type="button">submit</button>
     </form>
 <div id="output"></div>
@@ -36,11 +38,16 @@
             let p_gender = document.rgs.gender.value;
             let p_district = document.rgs.district.value;
             let p_address = document.rgs.address.value;
+            let box = []
+            const check = document.querySelectorAll('input[name = "nt"]:checked')
+            for(let i = 0 ; i <check.length;i++){
+                box.push(check[i].value)
+            }
 
            let output = "The person Name is :" +fullname + "<br>" +
            "the person gender is :" + p_gender +"<br>"+
            "the person district is:" + p_district + "<br>" + 
-           "the person address is :" + p_address +"<br>";
+           "the person address is :" + p_address +"<br>" + box;
 
             document.getElementById("output").innerHTML = output;
 
